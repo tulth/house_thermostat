@@ -1,0 +1,3 @@
+[submodule "cca/kicad_common"]
+	path = cca/kicad_common
+	url = git@github.com:tulth/kicad_common.git
