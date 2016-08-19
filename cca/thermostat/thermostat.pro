@@ -1,4 +1,4 @@
-update=Sun 14 Aug 2016 05:24:14 PM CDT
+update=Wed 17 Aug 2016 08:43:50 PM CDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,6 +6,25 @@ version=1
 NetIExt=net
 [general]
 version=1
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=thermostat.net
+PadDrill=0.762
+PadDrillOvalY=0.762
+PadSizeH=1.524
+PadSizeV=1.524
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0.2
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.15
+ModuleOutlineThickness=0.15
 [eeschema]
 version=1
 LibDir=../kicad_common/symbols
@@ -47,22 +66,6 @@ LibName34=t_transistor
 LibName35=t_diode
 LibName36=t_power
 LibName37=t_opamp
-[pcbnew]
-version=1
-PageLayoutDescrFile=
-LastNetListRead=netlist.nogit/thermostat.net
-PadDrill=0.762
-PadDrillOvalY=0.762
-PadSizeH=1.524
-PadSizeV=1.524
-PcbTextSizeV=1.5
-PcbTextSizeH=1.5
-PcbTextThickness=0.3
-ModuleTextSizeV=1
-ModuleTextSizeH=1
-ModuleTextSizeThickness=0.15
-SolderMaskClearance=0.2
-SolderMaskMinWidth=0
-DrawSegmentWidth=0.2
-BoardOutlineThickness=0.15
-ModuleOutlineThickness=0.15
+LibName38=t_res
+LibName39=t_conn
+LibName40=t_cap

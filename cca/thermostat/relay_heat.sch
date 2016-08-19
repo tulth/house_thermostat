@@ -36,11 +36,13 @@ LIBS:t_transistor
 LIBS:t_diode
 LIBS:t_power
 LIBS:t_opamp
+LIBS:t_res
+LIBS:thermostat-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -51,12 +53,9 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 2N3904 Q?
+L 2N3904 Q5
 U 1 1 57B0F199
 P 5150 4450
-AR Path="/57B09963/57B0F199" Ref="Q?"  Part="1" 
-AR Path="/57B0E920/57B0F199" Ref="Q?"  Part="1" 
-AR Path="/57B0CE22/57B0F199" Ref="Q5"  Part="1" 
 F 0 "Q5" H 5450 4500 50  0000 R CNN
 F 1 "2N3904" H 5150 4600 50  0000 R CNN
 F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide_Oval" H 5350 4550 50  0001 C CNN
@@ -96,12 +95,9 @@ Text HLabel 3350 2400 0    60   Input ~ 0
 Text HLabel 3250 4950 0    60   Input ~ 0
 GND
 $Comp
-L 2N3904 Q?
-U 1 1 57B0F19F
+L 2N3904 Q6
+U 1 1 57B26847
 P 6900 4450
-AR Path="/57B09963/57B0F19F" Ref="Q?"  Part="1" 
-AR Path="/57B0E920/57B0F19F" Ref="Q?"  Part="1" 
-AR Path="/57B0CE22/57B0F19F" Ref="Q6"  Part="1" 
 F 0 "Q6" H 7200 4500 50  0000 R CNN
 F 1 "2N3904" H 6900 4600 50  0000 R CNN
 F 2 "TO_SOT_Packages_THT:TO-92_Molded_Wide_Oval" H 7100 4550 50  0001 C CNN
@@ -136,49 +132,21 @@ Wire Wire Line
 Connection ~ 5600 3200
 Connection ~ 6400 3200
 Connection ~ 5600 2400
-$Comp
-L R R?
-U 1 1 57B0CDB3
-P 4700 4450
-AR Path="/57B09963/57B0CDB3" Ref="R?"  Part="1" 
-AR Path="/57B0E920/57B0CDB3" Ref="R?"  Part="1" 
-AR Path="/57B0CE22/57B0CDB3" Ref="R5"  Part="1" 
-F 0 "R5" V 4780 4450 50  0000 C CNN
-F 1 "10K" V 4700 4450 50  0000 C CNN
-F 2 "" V 4630 4450 50  0000 C CNN
-F 3 "" H 4700 4450 50  0000 C CNN
-	1    4700 4450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R?
-U 1 1 57B0CF2A
-P 7350 4450
-AR Path="/57B09963/57B0CF2A" Ref="R?"  Part="1" 
-AR Path="/57B0E920/57B0CF2A" Ref="R?"  Part="1" 
-AR Path="/57B0CE22/57B0CF2A" Ref="R6"  Part="1" 
-F 0 "R6" V 7430 4450 50  0000 C CNN
-F 1 "10K" V 7350 4450 50  0000 C CNN
-F 2 "" V 7280 4450 50  0000 C CNN
-F 3 "" H 7350 4450 50  0000 C CNN
-	1    7350 4450
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4850 4450 4950 4450
 Wire Wire Line
 	7200 4450 7100 4450
-Text HLabel 4450 4450 0    60   Output ~ 0
+Text HLabel 4350 4450 0    60   Output ~ 0
 SET
-Text HLabel 7600 4450 2    60   Output ~ 0
+Text HLabel 7700 4450 2    60   Output ~ 0
 RST
 Wire Wire Line
-	7600 4450 7500 4450
+	7700 4450 7600 4450
 Wire Wire Line
-	4450 4450 4550 4450
+	4350 4450 4450 4450
 $Comp
 L TX2-LT-5V-TH K3
-U 1 1 57B0FEE7
+U 1 1 57B2684A
 P 6050 3700
 F 0 "K3" H 6600 3700 50  0000 C CNN
 F 1 "TX2-LT-5V-TH" V 5550 3700 50  0000 C CNN
@@ -208,5 +176,27 @@ F 2 "t_footprints:DO-35" H 5150 3700 50  0001 C CNN
 F 3 "" H 5250 3700 50  0000 C CNN
 	1    5250 3700
 	0    1    1    0   
+$EndComp
+$Comp
+L R_thruhole R5
+U 1 1 57B12E3E
+P 4650 4450
+F 0 "R5" H 4650 4530 50  0000 C CNN
+F 1 "4.75k" H 4650 4350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" H 4750 4300 50  0001 C CNN
+F 3 "" V 4650 4350 50  0000 C CNN
+	1    4650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_thruhole R6
+U 1 1 57B12E8D
+P 7400 4450
+F 0 "R6" H 7400 4530 50  0000 C CNN
+F 1 "4.75k" H 7400 4350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" H 7500 4300 50  0001 C CNN
+F 3 "" V 7400 4350 50  0000 C CNN
+	1    7400 4450
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
