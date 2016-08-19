@@ -360,22 +360,22 @@ F14 "heatMode" O R 6300 4000 60
 $EndSheet
 $Comp
 L tstat_ui_conn P1
-U 1 1 57B79B20
+U 1 1 57B75506
 P 2750 3250
 F 0 "P1" H 2550 3350 60  0000 C CNN
 F 1 "tstat_ui_conn" H 2550 2650 60  0000 C CNN
-F 2 "" H 2550 2650 60  0001 C CNN
+F 2 "t_footprints:JST_PH_RIGHT_6pin" H 2550 2650 60  0001 C CNN
 F 3 "" H 2550 2650 60  0001 C CNN
 	1    2750 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L tstat_cable_con P2
-U 1 1 57B65B52
+U 1 1 57B75724
 P 10300 2100
 F 0 "P2" H 10550 2200 60  0000 C CNN
 F 1 "tstat_cable_con" H 10550 1300 60  0000 C CNN
-F 2 "JST_EH_RIGHT_10pin" H 10550 2200 60  0001 C CNN
+F 2 "t_footprints:JST_EH_RIGHT_8pin" H 10550 2200 60  0001 C CNN
 F 3 "" H 10550 2200 60  0001 C CNN
 	1    10300 2100
 	1    0    0    -1  
