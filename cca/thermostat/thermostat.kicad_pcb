@@ -3,7 +3,7 @@
   (general
     (links 105)
     (no_connects 105)
-    (area 0 0 0 0)
+    (area 59.105 15.884999 269.553 133.145)
     (thickness 1.6)
     (drawings 0)
     (tracks 0)
@@ -1460,7 +1460,7 @@
   )
 
   (module t_footprints:C_Radial_D8_L15_P3.5 (layer F.Cu) (tedit 0) (tstamp 57B74B10)
-    (at 233.68 36.29 90)
+    (at 233.68 35.56 90)
     (descr "Radial Electrolytic Capacitor Diameter 8mm x Length 15mm, Pitch 3.5mm")
     (tags "Electrolytic Capacitor")
     (path /57B0E3FE/57B74C61)
@@ -1531,7 +1531,7 @@
     (fp_text reference C2 (at 1 -3.8) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ESK106M016AC3AA (at 1 3.8) (layer F.Fab)
+    (fp_text value 10uF/16V (at 1 3.8) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.075 -2.499) (end 1.075 2.499) (layer F.SilkS) (width 0.15))
