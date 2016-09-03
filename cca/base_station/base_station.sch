@@ -540,4 +540,26 @@ Wire Wire Line
 	7000 2900 7400 2900
 Wire Wire Line
 	6900 3100 7400 3100
+$Comp
+L R_thruhole R1
+U 1 1 57CB0864
+P 3700 2100
+F 0 "R1" H 3700 2180 50  0000 C CNN
+F 1 "4.75K" H 3700 2000 50  0000 C CNN
+F 2 "t_footprints:Resistor_Horizontal_RM10mm" H 3800 1950 50  0001 C CNN
+F 3 "" V 3700 2000 50  0000 C CNN
+	1    3700 2100
+	0    1    1    0   
+$EndComp
+NoConn ~ 4900 2900
+NoConn ~ 4900 3200
+NoConn ~ 4900 3300
+NoConn ~ 4900 3400
+NoConn ~ 4900 3500
+NoConn ~ 4900 3600
+NoConn ~ 6600 3800
+NoConn ~ 6600 3700
+NoConn ~ 6600 3100
+NoConn ~ 6600 3000
+NoConn ~ 6600 2900
 $EndSCHEMATC
