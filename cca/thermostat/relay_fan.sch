@@ -39,6 +39,7 @@ LIBS:t_opamp
 LIBS:t_res
 LIBS:t_conn
 LIBS:t_cap
+LIBS:thermostat-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268

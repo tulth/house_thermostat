@@ -39,6 +39,7 @@ LIBS:t_opamp
 LIBS:t_res
 LIBS:t_conn
 LIBS:t_cap
+LIBS:thermostat-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -117,17 +118,6 @@ F 1 "GND" H 10450 1350 50  0000 C CNN
 F 2 "" H 10450 1500 50  0000 C CNN
 F 3 "" H 10450 1500 50  0000 C CNN
 	1    10450 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L ANTENNA_915 AE1
-U 1 1 57B15330
-P 6400 2200
-F 0 "AE1" H 6500 2500 60  0000 C CNN
-F 1 "ANTENNA_915" H 6400 2700 60  0000 C CNN
-F 2 "" H 6400 2200 60  0000 C CNN
-F 3 "" H 6400 2200 60  0000 C CNN
-	1    6400 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -348,8 +338,8 @@ F3 "fan_off_uc" O R 6300 2800 60
 F4 "GND" I L 4000 5400 60 
 F5 "+5VDC" I L 4000 2300 60 
 F6 "ant" B R 6300 2400 60 
-F7 "ui_tx" O L 4000 3650 60 
-F8 "ui_rx" I L 4000 3450 60 
+F7 "ui_tx" O L 4000 3450 60 
+F8 "ui_rx" I L 4000 3650 60 
 F9 "emheat_on_uc" O R 6300 5200 60 
 F10 "emheat_off_uc" O R 6300 5300 60 
 F11 "runMode" O R 6300 3700 60 
@@ -357,17 +347,6 @@ F12 "idleMode" O R 6300 3800 60
 F13 "coolMode" O R 6300 3900 60 
 F14 "heatMode" O R 6300 4000 60 
 $EndSheet
-$Comp
-L tstat_ui_conn P1
-U 1 1 57B75506
-P 2750 3250
-F 0 "P1" H 2550 3350 60  0000 C CNN
-F 1 "tstat_ui_conn" H 2550 2650 60  0000 C CNN
-F 2 "t_footprints:JST_PH_RIGHT_6pin" H 2550 2650 60  0001 C CNN
-F 3 "" H 2550 2650 60  0001 C CNN
-	1    2750 3250
-	1    0    0    -1  
-$EndComp
 $Comp
 L tstat_cable_con P2
 U 1 1 57B75724
@@ -377,6 +356,45 @@ F 1 "tstat_cable_con" H 10550 1300 60  0000 C CNN
 F 2 "t_footprints:JST_EH_RIGHT_8pin" H 10550 2200 60  0001 C CNN
 F 3 "" H 10550 2200 60  0001 C CNN
 	1    10300 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 57CAF08F
+P 6500 2350
+F 0 "#PWR09" H 6500 2100 50  0001 C CNN
+F 1 "GND" H 6500 2200 50  0000 C CNN
+F 2 "" H 6500 2350 50  0000 C CNN
+F 3 "" H 6500 2350 50  0000 C CNN
+	1    6500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2250 6500 2250
+Wire Wire Line
+	6500 2250 6500 2350
+Wire Wire Line
+	6600 2150 6400 2150
+$Comp
+L ANTENNA_915 AE1
+U 1 1 57CB1538
+P 6700 2200
+F 0 "AE1" H 6800 2500 60  0000 C CNN
+F 1 "ANTENNA_915" H 6700 2700 60  0000 C CNN
+F 2 "t_footprints:ant_915_dipole_conn" H 6600 2200 60  0001 C CNN
+F 3 "" H 6600 2200 60  0000 C CNN
+	1    6700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L tstat_ui_conn P1
+U 1 1 57CB1E1D
+P 2750 3250
+F 0 "P1" H 2550 3350 60  0000 C CNN
+F 1 "tstat_ui_conn" H 2550 2650 60  0000 C CNN
+F 2 "t_footprints:JST_PH_RIGHT_6pin" H 2550 2650 60  0001 C CNN
+F 3 "" H 2550 2650 60  0001 C CNN
+	1    2750 3250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
