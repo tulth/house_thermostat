@@ -241,17 +241,6 @@ F 3 "" H 4250 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_thruhole R1
-U 1 1 57B76700
-P 3700 2100
-F 0 "R1" H 3700 2180 50  0000 C CNN
-F 1 "4.75K" H 3700 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" H 3800 1950 50  0001 C CNN
-F 3 "" V 3700 2000 50  0000 C CNN
-	1    3700 2100
-	0    1    1    0   
-$EndComp
-$Comp
 L GND #PWR012
 U 1 1 57B76D37
 P 4400 1700
