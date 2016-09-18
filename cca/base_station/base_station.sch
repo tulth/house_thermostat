@@ -285,17 +285,6 @@ F 3 "" H 8750 5750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ANTENNA_915 AE1
-U 1 1 57CA267D
-P 8900 5650
-F 0 "AE1" H 9000 5950 60  0000 C CNN
-F 1 "ANTENNA_915" H 8900 6150 60  0000 C CNN
-F 2 "t_footprints:ant_915_dipole_conn" H 8800 5650 60  0001 C CNN
-F 3 "" H 8800 5650 60  0000 C CNN
-	1    8900 5650
-	1    0    0    -1  
-$EndComp
-$Comp
 L tstat_cable_con P2
 U 1 1 57CA4957
 P 7400 2900
@@ -549,6 +538,17 @@ F 1 "RFM69W" H 2750 4500 60  0000 C CNN
 F 2 "t_footprints:RFM69W" H 2700 3900 60  0001 C CNN
 F 3 "" H 2700 3900 60  0000 C CNN
 	1    2750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L ANTENNA_915 AE1
+U 1 1 57DF055D
+P 8900 5650
+F 0 "AE1" H 9000 5950 60  0000 C CNN
+F 1 "ANTENNA_915" H 8900 6150 60  0000 C CNN
+F 2 "t_footprints:ant_915_dipole_conn" H 8800 5650 60  0001 C CNN
+F 3 "" H 8800 5650 60  0000 C CNN
+	1    8900 5650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
