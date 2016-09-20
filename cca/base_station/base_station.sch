@@ -376,10 +376,6 @@ Wire Wire Line
 Wire Wire Line
 	6700 3900 6600 3900
 Wire Wire Line
-	4900 2700 1700 2700
-Wire Wire Line
-	1700 2700 1700 3700
-Wire Wire Line
 	1700 3700 1800 3700
 Wire Wire Line
 	1800 3600 1500 3600
@@ -518,7 +514,6 @@ F 3 "" V 3700 2000 50  0000 C CNN
 	1    3700 2100
 	0    1    1    0   
 $EndComp
-NoConn ~ 4900 2900
 NoConn ~ 4900 3200
 NoConn ~ 4900 3300
 NoConn ~ 4900 3400
@@ -551,4 +546,9 @@ F 3 "" H 8800 5650 60  0000 C CNN
 	1    8900 5650
 	1    0    0    -1  
 $EndComp
+NoConn ~ 4900 2700
+Wire Wire Line
+	4900 2900 1700 2900
+Wire Wire Line
+	1700 2900 1700 3700
 $EndSCHEMATC
