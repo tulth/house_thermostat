@@ -1,3 +1,6 @@
 [submodule "cca/kicad_common"]
 	path = cca/kicad_common
 	url = git@github.com:tulth/kicad_common.git
+[submodule "firmware/submodule_teensy_cores"]
+	path = firmware/submodule_teensy_cores
+	url = git@github.com:tulth/cores.git
