@@ -4,3 +4,6 @@
 [submodule "firmware/submodule_teensy_cores"]
 	path = firmware/submodule_teensy_cores
 	url = git@github.com:tulth/cores.git
+[submodule "firmware/submodule_RFM69"]
+	path = firmware/submodule_RFM69
+	url = https://github.com/tulth/RFM69.git
