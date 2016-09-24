@@ -36,24 +36,31 @@ add_definitions(-DUSB_SERIAL -DLAYOUT_US_ENGLISH -DTEENSYDUINO=124 -DF_CPU=48000
 add_definitions(-D__MKL26Z64__ )
 add_definitions(-DEMBEDDED )
 
-include_directories("../submodule_teensy_cores/teensy3" "./arm_lib/include" )
+include_directories("./arm_lib/include" )
+include_directories("../submodule_teensy_cores/teensy3" "../submodule_RFM69" )
+include_directories("../submodule_RFM69" )
+include_directories("../arduino/SPI" )
 
 ##############################
 file(GLOB TEENSY3_SRC "../submodule_teensy_cores/teensy3/*.c" "../submodule_teensy_cores/teensy3/*.cpp")
-message(TEENSY3_SRC)
 list(REMOVE_ITEM TEENSY3_SRC "${CMAKE_CURRENT_SOURCE_DIR}/../submodule_teensy_cores/teensy3/main.cpp")
+message("teensy3 source: " ${TEENSY3_SRC})
 add_library(teensy3 STATIC ${TEENSY3_SRC})
 
 ##############################
-foreach( top_src blink.cpp )
-    string( REPLACE ".cpp" ".elf" top_elf ${top_src} )
-    add_executable( ${top_elf} src/${top_src} )
-    target_link_libraries( ${top_elf} teensy3 )
-    set_target_properties( ${top_elf} PROPERTIES COMPILE_FLAGS "-Wpedantic -Wextra -Werror")
-    string( REPLACE ".cpp" ".hex" top_hex ${top_src} )
-    add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/${top_hex}
-                       COMMAND arm-none-eabi-objcopy -O ihex -R .eeprom ${top_elf} ${top_hex}
-                       DEPENDS ${top_elf}
-                       COMMENT "objcopying ${top_elf} to ${top_hex}")
-    add_custom_target( build_${top_hex} ALL DEPENDS ${CMAKE_BINARY_DIR}/${top_hex})
+file(GLOB RFM69_SRC "../submodule_RFM69/*.c" "../submodule_RFM69/*.cpp")
+message("rfm69 source: " ${RFM69_SRC})
+file(GLOB ARDUINO_SPI_SRC "../arduino/SPI/*.c" "../arduino/SPI/*.cpp")
+message("arduino_spi source: " ${ARDUINO_SPI_SRC})
+foreach( top_src blink.cpp gateway_example.cpp struct_receive_example.cpp struct_send_example.cpp )
+  string( REPLACE ".cpp" ".elf" top_elf ${top_src} )
+  add_executable( ${top_elf} src/${top_src} ${RFM69_SRC} ${ARDUINO_SPI_SRC})
+  target_link_libraries( ${top_elf} teensy3)
+  set_target_properties( ${top_elf} PROPERTIES COMPILE_FLAGS "-Wpedantic -Wextra -Werror")
+  string( REPLACE ".cpp" ".hex" top_hex ${top_src} )
+  add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/${top_hex}
+    COMMAND arm-none-eabi-objcopy -O ihex -R .eeprom ${top_elf} ${top_hex}
+    DEPENDS ${top_elf}
+    COMMENT "objcopying ${top_elf} to ${top_hex}")
+  add_custom_target( build_${top_hex} ALL DEPENDS ${CMAKE_BINARY_DIR}/${top_hex})
 endforeach( top_src ${APP_SOURCES} )
